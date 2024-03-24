@@ -118,13 +118,9 @@
       },
       "copyBrightness": "Copia actual\nvalor de luminosidad",
       "description": "Haz que OyasumiVR ajuste automáticamente el brillo de tu casco de RV en distintos momentos, como cuando te vas a dormir o cuando te despiertas.",
-      "displayBrightness": {
-        "description": "Ajusta el brillo de la retroiluminación de la pantalla LCD (sólo Valve Index)",
-        "title": "Cambia el brillo de la pantalla a"
-      },
-      "imageBrightness": {
-        "description": "Ajusta el brillo de la imagen mostrada en tu casco de realidad virtual",
-        "title": "Cambia el brillo de la imagen a"
+      "hardwareBrightness": {
+        "description": "Ajusta el brillo de la pantalla.",
+        "title": "Cambia el brillo del hardware a"
       },
       "onSleepDisable": {
         "description": "Ajustar el brillo",
@@ -147,6 +143,10 @@
         "description": "Puedes prepararte para irte a dormir pulsando un botón en la superposición de OyasumiVR. El botón para esto se mostrará cuando tengas una o más automatizaciones de preparación para dormir activas, como esta. Utilízalo para empezar a atenuar el brillo antes de quedarte dormido.",
         "title": "Preparación para dormir"
       },
+      "softwareBrightness": {
+        "description": "Ajusta el brillo de la imagen mostrada en tu casco de realidad virtual",
+        "title": "Cambia el brillo del software a"
+      },
       "startupAutomations": "Automatizaciones de arranque",
       "transition": {
         "description": "Transición suave al valor de brillo deseado",
@@ -157,13 +157,44 @@
         "title": "Tiempo de transición"
       }
     },
+    "hmdSettings": {
+      "bigscreenBeyond": {
+        "forceFanSafety": {
+          "description": "Forzar el ventilador al 100% con valores de luminosidad superiores al 100%",
+          "title": "Seguridad del ventilador Overdrive",
+          "warning": "Esta función imita los parámetros de ventilador seguro del controlador oficial Bigscreen Beyond. Desactiva esta funcionalidad bajo tu propia responsabilidad."
+        },
+        "maxBrightness": {
+          "description": "Limita el valor máximo de brillo que OyasumiVR establecerá.",
+          "title": "Brillo máximo"
+        },
+        "permitRiskRange": {
+          "description": "Impide ajustar el brillo por encima del 150%.",
+          "title": "Limitar a niveles de brillo seguros",
+          "warning": "El fabricante no admite esta función.\n\nTenga en cuenta que podría dañar sus auriculares: Desactive esta función bajo su propia responsabilidad."
+        },
+        "title": "Más allá de la pantalla grande"
+      },
+      "description": "Aquí encontrarás cualquier ajuste relacionado con el brillo para tu casco de RV específico.",
+      "valveIndex": {
+        "maxBrightness": {
+          "description": "Limita el valor máximo de brillo que OyasumiVR establecerá.",
+          "title": "Brillo máximo"
+        },
+        "title": "Valve Index"
+      }
+    },
     "mode": {
       "advanced": "Modo avanzado",
       "simple": "Modo simple"
     },
     "modeInfoModal": {
-      "message": "Por defecto, OyasumiVR controlará el brillo de tu casco de RV ajustando el brillo de la imagen. Si estás usando un casco con un panel LCD que puede tener su retroiluminación controlada a través de SteamVR (e.j, el Valve Index), OyasumiVR controlará el brillo de la pantalla en su lugar siempre que sea posible.\n\nEn el modo simple, OyasumiVR hará una transición suave entre el control del brillo de la imagen y el brillo de la pantalla.\n\nEn caso de que prefiera el control directo, el modo avanzado le permite controlar tanto el brillo de la imagen como el de la pantalla por separado, y le permite establecer valores exactos de brillo para cada uno de ellos.\n\nEsto sólo se aplica a los cascos que lo admiten, que actualmente sólo son los Valve Index. En otros cascos de RV, no hay diferencia entre el modo simple y el avanzado.",
+      "message": "OyasumiVR dispone de dos métodos para controlar el brillo de tu casco de RV: Control por software y control por hardware:\n\nEl control por software está disponible para todos los cascos. Ajusta el brillo de tu casco de RV ajustando el brillo de la imagen.\n\nEl control por hardware sólo está disponible para los cascos compatibles (Valve Index, Bigscreen Beyond). Ajusta el brillo de la pantalla de tus cascos directamente dentro del rango soportado.\n\nEn el modo simple, OyasumiVR hará una transición suave entre el control del brillo por software y por hardware, o sólo el brillo por software si el brillo por hardware no está soportado.\n\nSi prefieres el control directo, el modo avanzado te permite controlar tanto el brillo del software como el del hardware por separado, permitiéndote establecer los valores exactos de brillo para cada uno.",
       "title": "Modo de control de brillo"
+    },
+    "tabs": {
+      "automations": "Automatizaciones",
+      "hmdSettings": "Ajustes HMD"
     },
     "title": "Automatización del brillo"
   },
@@ -186,8 +217,8 @@
     "brightness-control-modal": {
       "automationsTooltip": "Automatización del brillo",
       "brightness": "Brillo",
-      "displayBrightness": "Brillo de la pantalla",
-      "imageBrightness": "Brillo de la imagen"
+      "hardwareBrightness": "Hardware Brillo",
+      "softwareBrightness": "Software Brillo"
     },
     "confirm-modal": {
       "defaultTitle": "Confirmar"
@@ -230,6 +261,7 @@
       "chaperoneAutomations": "Automatizaciones Chaperone",
       "gpuAutomations": "Automatizaciones de GPU",
       "hardwareAutomations": "Automatizaciones de hardware",
+      "hmdAutomations": "Automatizaciones específicas HMD",
       "miscAutomations": "Automacaciones misceláneas",
       "nightmareDetection": "Detección de pesadilla",
       "oscAutomations": "Automatizaciones OSC",
@@ -369,17 +401,6 @@
           },
           "title": "Distancia de desvanecimiento del chaperón ajustada a {value}"
         },
-        "displayBrightnessChanged": {
-          "reason": {
-            "SLEEP_MODE_DISABLED": "Cuando el modo sueño estaba desactivad",
-            "SLEEP_MODE_ENABLED": "Cuando el modo sueño estaba activado",
-            "SLEEP_PREPARATION": "Mientras te preparabas para dormir"
-          },
-          "title": {
-            "set": "Brillo de la pantalla del auricular ajustado a {value}",
-            "transition": "Brillo de la pantalla del auricular pasando a {value}"
-          }
-        },
         "gpuPowerLimitChanged": {
           "reason": {
             "SLEEP_MODE_DISABLED": "Cuando el modo sueño estaba desactivado",
@@ -390,15 +411,15 @@
             "set": "Límite de potencia para ''{device}'' ajustado a {limit}"
           }
         },
-        "imageBrightnessChanged": {
+        "hardwareBrightnessChanged": {
           "reason": {
-            "SLEEP_MODE_DISABLED": "Cuando el modo sueño estaba desactivado",
+            "SLEEP_MODE_DISABLED": "Cuando el modo sueño estaba desactivad",
             "SLEEP_MODE_ENABLED": "Cuando el modo sueño estaba activado",
             "SLEEP_PREPARATION": "Mientras te preparabas para dormir"
           },
           "title": {
-            "set": "Brillo de la imagen del auricular ajustado a {value}",
-            "transition": "Brillo de la imagen del auricular pasando a {value}"
+            "set": "El brillo del hardware del headset está ajustado a {value}",
+            "transition": "Brillo del hardware del headset en transición a {value}"
           }
         },
         "lighthouseSetPowerState": {
@@ -552,6 +573,17 @@
             "osc-control": "El modo sueño se activó a través de OSC"
           },
           "title": "Modo de sueño activado"
+        },
+        "softwareBrightnessChanged": {
+          "reason": {
+            "SLEEP_MODE_DISABLED": "Cuando el modo sueño estaba desactivado",
+            "SLEEP_MODE_ENABLED": "Cuando el modo sueño estaba activado",
+            "SLEEP_PREPARATION": "Mientras te preparabas para dormir"
+          },
+          "title": {
+            "set": "Brillo del software del headset ajustado a {value}",
+            "transition": "Brillo del software del headset pasando a {value}"
+          }
         },
         "statusChangedOnPlayerCountChange": {
           "reason": {
@@ -797,6 +829,38 @@
     },
     "title": "Automatizaciones de GPU"
   },
+  "hmd-automations": {
+    "bigscreenBeyond": {
+      "description": "Aquí puedes automatizar ciertas funciones específicas de la Más allá de la pantalla grande.",
+      "fanControl": {
+        "allowUnsafeFanSpeed": {
+          "description": "Impide ajustar la velocidad del ventilador por debajo del 40%",
+          "title": "Límite a las velocidades seguras del ventilador",
+          "warning": "Ajustar la velocidad del ventilador por debajo del 40% no está soportado por el fabricante, y podría potencialmente causar daños al dejar que su auricular se sobrecaliente. Desactiva esta función bajo tu propia responsabilidad."
+        },
+        "onSleepDisable": {
+          "description": "Cambiar la velocidad del ventilador cuando el modo de dormir está desactivado",
+          "title": "Cuando me despierto"
+        },
+        "onSleepEnable": {
+          "description": "Cambiar la velocidad del ventilador cuando el modo de dormir está activado",
+          "title": "Cuando me voy a dormir"
+        },
+        "onSleepPreparation": {
+          "description": "Cambiar la velocidad del ventilador cuando me dispongo a dormir",
+          "title": "Cuando me dispongo a dormir"
+        },
+        "title": "Velocidad del ventilador"
+      },
+      "rgb": {
+        "title": "RGB Led"
+      }
+    },
+    "tabs": {
+      "bigscreenBeyond": "Más allá de la pantalla grande"
+    },
+    "title": "Automatizaciones específicas de HMD"
+  },
   "misc": {
     "GOGO_LOCO_LEGACY_PRESET_WARNING": "Este preajuste utiliza una solución que tiene algunos problemas. Por favor, utiliza este preajuste sólo si no puedes utilizar el preajuste GoGo Loco más reciente. Si tu avatar todavía utiliza una versión anterior de GoGo Loco, se recomienda que actualices tu avatar para utilizar la última versión de GoGo Loco.",
     "oscScriptEditorErrors": {
@@ -941,9 +1005,9 @@
   },
   "overlay": {
     "brightness": {
-      "display": "Brillo de la pantalla",
-      "image": "Brillo de la imagen",
-      "simple": "Brillo"
+      "hardware": "Hardware Brillo",
+      "simple": "Brillo",
+      "software": "Software Brillo"
     },
     "dashboard": {
       "automations": {
@@ -1963,6 +2027,6 @@
       "unknown": "Unknown",
       "unmuted": "Unmute"
     },
-    "title": "Silenciamiento del micrófono"
+    "title": "Silenciamiento del micrófono VRChat"
   }
 }

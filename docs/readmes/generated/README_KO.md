@@ -20,8 +20,6 @@
     <a href="https://patreon.com/Raphii"><img alt="Patreon Page" src="https://github.com/Raphiiko/OyasumiVR/assets/111654848/7d3d83a5-0900-4ccc-a514-ed1d616cb2ce"/></a>
     <br>
     <br>
-    ❤️&nbsp;<a href="https://aptabase.com/">Built on Aptabase</a>
-    <br>
 이야기를 나누고 싶으시면, 우리 <a href="https://discord.gg/7MqdPJhYxC"><img src="https://user-images.githubusercontent.com/111654848/192362041-f09cc066-a964-446f-aa2c-fa7a7a31ec05.png" width="16" style="fill: white" /> 디스코드 서버</a>에 들러주세요!
     <br>
     <br>
@@ -296,26 +294,46 @@ VR에서 잠들고 싶지만 밤새 VR에 머물고 싶지 않은 적이 있나�
 <table>
   <tr>
     <td>
-자고 일어날 때 밝기를 자동으로 조절할 수 있어요. OyasumiVR은 VR 헤드셋의 밝기를 부드럽게 전환할 수 있으므로 잠을 깨우지 않고 잠을 자는 동안 서서히 밝기가 낮아집니다.
+Automate your brightness for when you sleep and wake up. OyasumiVR can smoothly transition your VR headset's brightness, so it falls down gradually as you sleep without waking you up.
 <br><br>
-이미지 밝기뿐만 아니라 헤드셋이 지원하는 경우 디스플레이 밝기(LCD 백라이트)도 제어할 수 있어요(예: Valve Index). 여러 가지 자동화 기능을 제공할 뿐만 아니라 SteamVR 오버레이 메뉴에서 바로 밝기 수준을 쉽게 제어할 수 있습니다!
+It allows you to control both software brightness, as well as hardware brightness if your headset supports it (e.g. Valve Index or Bigscreen Beyond). In addition to providing you with several automations, you can easily control your brightness levels right from the SteamVR overlay menu!
     </td>
     <td width="380"><img src="https://github.com/Raphiiko/OyasumiVR/assets/111654848/6b901813-d8b9-41c3-bfaf-59b0a11bf2a8"></td>
   </tr>
 
 </table>
 
-### 🎤 시스템 마이크 음소거 자동화
+### 🎤 Microphone Mute Automations
 
 <table>
-  <tr>
+   <tr>
     <td>
-OyasumiVR이 잠들거나 깨어날 때 자동으로 마이크를 음소거하거나 음소거 해제하도록 설정할 수 있어요. 또는 음소거 토글 모드와 눌러서 말하기 모드 사이를 전환할 수도 있습니다.
-<br><br>다른 사람에게 코 고는 소리가 들리지 않도록 하고 싶다면 안성맞춤입니다!
-<br><br>
-VR 오버레이에 음소거 표시기가 옵션으로 제공되며, 컨트롤러 버튼을 바인딩하는 옵션이 있어 VRChat 또는 플레이하는 다른 VR 게임의 마이크 음소거 기능을 완전히 대체할 수 있습니다.
+<b>VRChat Microphone Mute Automations</b><br>
+You can have OyasumiVR automatically mute or unmute your mic in VRChat when you go to sleep and wake up.
+<br><br>Perfect if you'd like to prevent others from hearing you snore!
     </td>
     <td width="380"><img src="https://github.com/Raphiiko/OyasumiVR/assets/111654848/6c3d3f13-0c88-4af7-96b0-d9ea72acf69c"></td>
+  </tr>
+  <tr>
+    <td>
+<b>System Microphone Mute Automations</b><br>
+OyasumiVR can also do the same, but on a system level, muting your Microphone's audio device instead.
+With this, you can even switch between mute toggle mode and push-to-talk.
+<br><br>
+This comes with an optional mute indicator in the VR overlay, and the option for binding a controller button so that you can have it completely replace the microphone muting functionality of VRChat or any other VR game you play.
+    </td>
+    <td width="380"><img src="https://github.com/Raphiiko/OyasumiVR/assets/111654848/6c3d3f13-0c88-4af7-96b0-d9ea72acf69c"></td>
+  </tr>
+</table>
+
+### 🔉 Audio Volume Automations
+
+<table>
+   <tr>
+    <td>
+Automatically change the volume of your audio devices when you fall asleep, or wake up! This can be useful if you want to prevent other players, or other applications from disturbing your sleep.
+    </td>
+    <td width="380"><img src="https://github.com/Raphiiko/OyasumiVR/assets/111654848/e5043544-b426-4b45-8131-4f63dcc6a184"></td>
   </tr>
 </table>
 
@@ -348,6 +366,23 @@ OyasumiVR은 악몽을 꾸고 있다는 신호일 수 있는 심박수가 장시
   </tr>
 </table>
 
+### 🚨 HMD Specific Automations
+
+<table>
+   <tr>
+    <td>
+OyasumiVR has various automations for controlling certain features specific to certain VR Headsets. Currently, this includes the following:
+<br><br>
+<b>Bigscreen Beyond</b>
+<ul>
+<li>RGB Led Control</li>
+<li>Fan Speed Control</li>
+</ul>
+    </td>
+    <td width="380"><img src="https://github.com/Raphiiko/OyasumiVR/assets/111654848/9909caa0-deeb-41da-a56e-148a09d0303c"></td>
+  </tr>
+</table>
+
 ### 👓 해상도 자동화
 
 <table>
@@ -376,14 +411,14 @@ OyasumiVR은 현재 다음 언어를 지원하고 있어요:
 
 - 영어 (English)
 - 네덜란드어 (Nederlands)
-- 일본어 (日本語) (외주 + 커뮤니티 번역 기여: [なき](https://twitter.com/NoYu_idea))
+- 일본어 (日本語) (커뮤니티 번역 기여: [なき](https://twitter.com/NoYu_idea), [Milix-M](https://github.com/Milix-M))
 - 한국어 (커뮤니티 번역 기여: [Soumt](https://github.com/soumt-r))
 - 중국어 번체 (繁體中文) (커뮤니티 번역 기여: [狐 Kon](https://github.com/XoF-eLtTiL))
 - 중국어 간체 (简体中文) (커뮤니티 번역 기여: [狐 Kon](https://github.com/XoF-eLtTiL), [雾雨花精灵](https://twitter.com/u_flower_elf), [いんく](https://twitter.com/sayonara_natsu))
 - 프랑스어 (Français) (커뮤니티 번역 기여: [neuroblack](https://github.com/neuroblack)) (**Looking for additional maintainer!**)
 - 스페인어 (Español) (커뮤니티 번역 기여: [aacal666](https://twitter.com/aacalde666))
 - 인도네시아어 (Bahasa Indonesia) (커뮤니티 번역 기여: [a9ito](https://twitter.com/a9ito))
-- 러시아어 (Русский) (커뮤니티 번역 기여: [Kanjir0](https://twitter.com/Kanjiro_vrc))
+- 러시아어 (Русский) (커뮤니티 번역 기여: [Kanjir0](https://twitter.com/Kanjiro_vrc), [Pacmard](https://github.com/pacmard))
 
 ### 번역 지원하기
 
@@ -419,9 +454,9 @@ OyasumiVR로 그래픽 카드의 전력 제한을 직접 제어하는 것은 NVI
 
 ### 밝기 자동화
 
-VR 헤드셋 디스플레이의 디스플레이 밝기(LCD 백라이트 밝기)를 제어하는 기능은 Valve Index에서만 지원되어요.
+Controlling the hardware brightness of the VR headset's display is currently only supported on the Valve Index, and the Bigscreen Beyond.
 
-이미지 밝기 제어는 모든 헤드셋에서 사용할 수 있습니다.
+Image brightness control is available on all headsets.
 
 ## 기반 기술
 

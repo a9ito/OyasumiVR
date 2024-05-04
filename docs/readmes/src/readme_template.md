@@ -20,8 +20,6 @@
     <a href="https://patreon.com/Raphii"><img alt="Patreon Page" src="https://github.com/Raphiiko/OyasumiVR/assets/111654848/7d3d83a5-0900-4ccc-a514-ed1d616cb2ce"/></a>
     <br>
     <br>
-    ❤️&nbsp;<a href="https://aptabase.com/">{{token.builtOnAptabase}}</a>
-    <br>
 {{DISCORD_INVITE}}
     <br>
     <br>
@@ -212,14 +210,31 @@
 
 </table>
 
-### {{SYSTEM_MICROPHONE_MUTE_AUTOMATIONS_HEADER}}
+### {{MICROPHONE_MUTE_AUTOMATIONS_HEADER}}
 
 <table>
+   <tr>
+    <td>
+{{VRCHAT_MICROPHONE_MUTE_AUTOMATIONS_BODY}}
+    </td>
+    <td width="380"><img src="https://github.com/Raphiiko/OyasumiVR/assets/111654848/6c3d3f13-0c88-4af7-96b0-d9ea72acf69c"></td>
+  </tr>
   <tr>
     <td>
 {{SYSTEM_MICROPHONE_MUTE_AUTOMATIONS_BODY}}
     </td>
     <td width="380"><img src="https://github.com/Raphiiko/OyasumiVR/assets/111654848/6c3d3f13-0c88-4af7-96b0-d9ea72acf69c"></td>
+  </tr>
+</table>
+
+### {{AUDIO_VOLUME_AUTOMATIONS_HEADER}}
+
+<table>
+   <tr>
+    <td>
+{{AUDIO_VOLUME_AUTOMATIONS_BODY}}
+    </td>
+    <td width="380"><img src="https://github.com/Raphiiko/OyasumiVR/assets/111654848/e5043544-b426-4b45-8131-4f63dcc6a184"></td>
   </tr>
 </table>
 
@@ -243,6 +258,17 @@
 {{HEART_RATE_AUTOMATIONS_BODY_NIGHTMARE_DETECTION}}
     </td>
     <td width="380"><img src="https://github.com/Raphiiko/OyasumiVR/assets/111654848/91ac5113-0400-4888-ba6c-3260f73aee8b"></td>
+  </tr>
+</table>
+
+### {{HMD_SPECIFIC_AUTOMATIONS_HEADER}}
+
+<table>
+   <tr>
+    <td>
+{{HMD_SPECIFIC_AUTOMATIONS_BODY}}
+    </td>
+    <td width="380"><img src="https://github.com/Raphiiko/OyasumiVR/assets/111654848/9909caa0-deeb-41da-a56e-148a09d0303c"></td>
   </tr>
 </table>
 
